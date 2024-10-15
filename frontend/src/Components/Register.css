@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.login-page {
+    display: flex;
+    height: 100vh;
+}
+
+.logo-image {
+    width: 50%;
+    max-width: 150px; 
+    margin: 0 auto 20px auto;
+    display: block;
+}
+
+.image-side {
+    flex: 1;
+    background-color: #000; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+
+.login-image {
+    width: 100%; /* Make the image responsive */
+    height: 100%;
+    object-fit: cover; /* Prevent image distortion */
+}
+
+/* Styling for the form side */
+.form-side {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #a9c6c7;
+    padding: 20px; /* Add padding for better spacing */
+}
+
+.login-form {
+    width: 100%;
+    max-width: 600px; /* Make the form responsive */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: center; /* Center-align form content */
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left; /* Left-align labels and inputs */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px; /* Add spacing above the button */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .login-page {
+        flex-direction: column;
+    }
+
+    .image-side {
+        height: 40vh; /* Adjust image height on smaller screens */
+    }
+
+    .form-side {
+        padding: 20px;
+    }
+
+    .login-form {
+        max-width: 100%; /* Form takes full width on smaller screens */
+        padding: 15px;
+    }
+
+    .logo-image {
+        max-width: 120px; /* Smaller logo on mobile */
+        margin-bottom: 10px;
+    }
+}
